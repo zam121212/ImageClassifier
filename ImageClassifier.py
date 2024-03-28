@@ -7,8 +7,8 @@ import os
 import cv2
 from sklearn.model_selection import train_test_split
 
-DIR =r"C:\Users\Ganesh Pavan Munduri\DataSet"
-CATEGORIES = ["airplane","automobile","bird","cat","deer","dog","frog","horse","ship","truck"]
+DIR =r"C:\Users\DataSet" #place your dataset Path Here
+CATEGORIES = ["airplane","automobile","bird","cat","deer","dog","frog","horse","ship","truck"] # change with your custom classes
 len_categories=len(CATEGORIES)
 training_data=[]
 
@@ -69,7 +69,7 @@ y_classes = [np.argmax(element) for element in y_pred]
 for i in range(len(y_classes)):
     print(CATEGORIES[y_classes[i]])
 
-Pathtosave=r"C:\Users\Ganesh Pavan Munduri\CNN"
+Pathtosave=r"C:\Users\CNN" #Change the path to where you want to save
 cnn.save(Pathtosave)
 
 onnx_model_name = 'model.onnx'
